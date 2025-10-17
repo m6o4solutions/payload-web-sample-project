@@ -1,13 +1,13 @@
 {
-  "name": "",
+  "name": "payload-web-sample-project",
   "version": "1.0.0",
-  "description": "Website template for Payload",
+  "description": "The official Payload Website Template.",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
-    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbo",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
@@ -24,6 +24,7 @@
   "dependencies": {
     "@payloadcms/admin-bar": "3.60.0",
     "@payloadcms/db-mongodb": "3.60.0",
+    "@payloadcms/email-resend": "3.60.0",
     "@payloadcms/live-preview-react": "3.60.0",
     "@payloadcms/next": "3.60.0",
     "@payloadcms/payload-cloud": "3.60.0",
@@ -33,6 +34,7 @@
     "@payloadcms/plugin-search": "3.60.0",
     "@payloadcms/plugin-seo": "3.60.0",
     "@payloadcms/richtext-lexical": "3.60.0",
+    "@payloadcms/storage-s3": "^3.60.0",
     "@payloadcms/ui": "3.60.0",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-label": "^2.0.2",
@@ -75,7 +77,7 @@
     "playwright-core": "1.54.1",
     "postcss": "^8.4.38",
     "prettier": "^3.4.2",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "3.4.3",
     "typescript": "5.7.3",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.3"
