@@ -14,6 +14,8 @@ import { Footer } from './Footer/config'
 import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
+import { resend } from '@/fields/resend'
+
 import { getServerSideURL } from './utilities/getURL'
 
 const filename = fileURLToPath(import.meta.url)
@@ -57,6 +59,7 @@ export default buildConfig({
     },
   },
   editor: defaultLexical,
+  email: resend,
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
   }),
